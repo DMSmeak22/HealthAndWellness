@@ -1,16 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Index.html site as hiomepage for health and wellness hub-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health and Wellness Home</title>
+    <title>Health and Fitness Hub</title>
+    <link rel="stylesheet" href="desktopCSS.css">
 </head>
 <body>
-    <!--Basic information to ensure git is working correctly-->
-    <h1>welcome to the site!</h1>
-    <p>This page will specifically be the home page for my website</p>
-    <hr>
-    <p>There is no important information on this page yet, for now just eat some fruit and go for a walk to keep in shape!</p>
+    <header>
+        <h1>Health and Fitness Hub</h1>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <div class="nav-header">
+                <button class="collapse-btn" onclick="toggleNav()">≡</button>
+            </div>
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="weightlifting.html">Weightlfiting</a></li>
+                <li><a href="cardio.html" class="active">Cardio</a></li>
+                <li><a href="recovery.html">Recovery</a></li>
+                <li><a href="healthyEating.html">Healthy Eating</a></li>
+                <li><a href="healthyHabit.html">Healthy Habits</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content-wrapper">
+            <main class="content">
+                <section class="content-section">
+                    <h2>Weightlifting</h2>
+                    <p>Content for section 1 will go here.</p>
+                </section>
+                <section class="content-section">
+                    <h2>Cardio</h2>
+                    <p>Content for section 2 will go here.</p>
+                </section>
+                <section class="content-section">
+                    <h2>Recovery</h2>
+                    <p>Content for section 3 will go here.</p>
+                </section>
+                <section class="content-section">
+                    <h2>Healthy Eating</h2>
+                    <p>Content for section 4 will go here.</p>
+                </section>
+                <section class="content-section">
+                    <h2>Healthy Habits</h2>
+                    <p>Content for section 5 will go here.</p>
+                </section>
+            </main>
+
+            <aside class="calculator-box">
+                <section class="content-section calculator">
+                    <h3>Calorie Intake Calculator</h3>
+                    <p class="calculator-description">This calculator finds the average amount of calories per day you need to consume to stay the same weight.</p>
+                </section>
+                <div class="calculator-form">
+                    <div class="input-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="e.g. 30" min="15" max="120">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="gender" value="male" checked>
+                                <span>Male</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="female">
+                                <span>Female</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Height</label>
+                        <div class="imperial-input">
+                            <input type="number" id="feet" min="0">
+                            <span>ft</span>
+                            <input type="number" id="inches" min="0" max="11">
+                            <span>in</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Weight</label>
+                        <div class="imperial-input">
+                            <input type="number" id="pounds" min="0">
+                            <span>lbs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="activity">Activity Level</label>
+                        <select id="activity">
+                            <option value="1.2">Sedentary (little exercise)</option>
+                            <option value="1.375">Lightly active</option>
+                            <option value="1.55">Moderately active</option>
+                        </select>
+                    </div>
+                    
+                    <button class="calculate-btn">Calculate Calories</button>
+                    
+                    <div class="result-box" id="result">
+                        <p>Your daily calorie needs will appear here</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
