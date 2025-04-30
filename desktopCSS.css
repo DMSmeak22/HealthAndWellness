@@ -235,3 +235,45 @@ input[type="number"], select {
 .result-box p {
     margin: 0;
 }
+
+/*Weighlifting Page Specific CSS*/
+/* Workout Plan Grid */
+.workout-plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.plan-card {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Sample Workout */
+.sample-workout {
+    margin-top: 30px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #068497;
+}
+
+.workout-day {
+    margin: 15px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+}
+
+.workout-day ul {
+    padding-left: 20px;
+}
+
+.workout-note {
+    font-style: italic;
+    color: #555;
+    margin-top: 10px;
+}
