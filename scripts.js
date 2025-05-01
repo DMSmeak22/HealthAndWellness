@@ -64,3 +64,29 @@ function showError(message) {
     resultBox.innerHTML = `<p class="error">${message}</p>`;
 }
 
+// Habit Generator
+document.addEventListener('DOMContentLoaded', function() {
+    const habits = [
+      "Drink a glass of water before coffee",
+      "Take the stairs instead of elevator",
+      "Do 2 minutes of stretching right now",
+      "Call/text someone you appreciate",
+      "Add veggies to your next snack",
+      "Breathe deeply for 1 minute",
+      "Stand and stretch every hour",
+      "Try a new healthy food this week",
+      "10-minute walk without your phone",
+      "Express gratitude for one thing today"
+    ];
+  
+    const generateBtn = document.getElementById('generateHabit');
+    const habitDisplay = document.getElementById('habitDisplay');
+  
+    if (generateBtn && habitDisplay) {
+      generateBtn.addEventListener('click', function() {
+        const randomHabit = habits[Math.floor(Math.random() * habits.length)];
+        habitDisplay.innerHTML = `<p>${randomHabit}</p>`;
+      });
+    }
+  });
+
